@@ -33,7 +33,7 @@ Puedes acceder a la aplicación en [GeneraBD Online](https://jordismt.github.io/
 
 ¡Las contribuciones son bienvenidas! Si deseas mejorar la aplicación, siéntete libre de hacer un fork del repositorio y enviar un pull request.
 
-
+Debo aclarar, que la app esta hecha simplemente para practicar mis conocimientos de programación y que de seguro es mejorable.
 ## Contacto
 
 Para cualquier pregunta o sugerencia, puedes contactar a [Jordi Casanova](mailto:jodocasol2002@gmail.com).
