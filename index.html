@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="GeneraBD Online: Herramienta intuitiva para crear y gestionar bases de datos de forma rápida y eficiente. Genera automáticamente el código SQL y la documentación necesaria.">
+        <meta name="keywords" content="Generador de base de datos, SQL, documentación, herramientas de desarrollo, gestión de bases de datos">
+        <meta name="author" content="Jordi Casanova">
+        <title>GeneraBD Online</title>
+        <link rel="icon" href="./img/logo_generabd.png" type="image/png">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    
+<body>
+    <header>
+
+        <h1>Generador Automático de Base de Datos</h1>
+
+        <h2 class="subtitle">Crea y gestiona tus bases de datos de forma rápida y eficiente</h2>
+    </header>
+    <br><br>
+    <p class="description">Una herramienta intuitiva para diseñar bases de datos sin complicaciones. Genera automáticamente el código SQL y la documentación necesaria con un solo clic.</p>
+    
+    <p class="instruction">Comienza creando tus entidades y atributos a continuación. Utiliza los botones para añadir, editar o eliminar elementos de tu base de datos.</p>
+
+
+    
+    <div class="container">
+        <div id="entities-container">
+            <!-- Aquí se agregarán las entidades dinámicamente -->
+        </div>
+
+        <div class="button-container">
+            <button class="btn" onclick="addEntity()">Añadir Entidad</button>
+            <button class="btn" onclick="generateDatabase()">Generar Base de Datos</button>
+            <button class="btn" onclick="generateDocumentation()">Generar Documentación</button>
+            <button class="btn btn-clear" onclick="clearAll()">Vaciar Todo</button>
+            <button class="btn btn-red" onclick="downloadDocumentation()">Descargar Documentación</button>
+            <button class="btn btn-red" onclick="downloadSQL()">Descargar Script SQL</button>
+        </div>
+
+        <div class="relation-container" id="relation-container" style="display: none;">
+            <h2>Definir Relaciones (Claves Foráneas)</h2>
+            <div class="relation">
+                <select id="relation-entity-1">
+                    <option value="">Seleccionar Entidad 1</option>
+                </select>
+                <select id="relation-attribute-1">
+                    <option value="">Seleccionar Atributo de Entidad 1</option>
+                </select>
+            </div>
+            <div class="relation">
+                <select id="relation-entity-2">
+                    <option value="">Seleccionar Entidad 2</option>
+                </select>
+                <select id="relation-attribute-2">
+                    <option value="">Seleccionar Atributo de Entidad 2</option>
+                </select>
+            </div>
+            <button class="btn" onclick="addRelation()">Añadir Relación</button>
+        </div>
+
+        <div class="output-container">
+            <div class="sql-output-container">
+                <h2>Script SQL Generado</h2>
+                <textarea id="sql-output" rows="10" readonly></textarea>
+            </div>
+
+            <div class="documentation-output-container">
+                <h2>Documentación Generada</h2>
+                <textarea id="documentation-output" rows="10" readonly></textarea>
+            </div>
+        </div>
+        
+    </div>
+    <br><br><br>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    
+   
+    margin: 0 auto;
+}
+
+header {
+    position: relative; /* Asegura que el header se mantenga en su lugar */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Alineación a la izquierda */
+    width: 100%; /* Ancho completo */
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Elimina márgenes adicionales */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 1.8em;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description, .instruction {
+    font-size: 1.1em;
+    color: #495057;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#entities-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.btn {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    flex: 1;
+    margin: 5px;
+    font-size: 1.1em;
+    min-width: 120px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #0056b3, #00408d);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-red {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+.btn-red:hover {
+    background: linear-gradient(135deg, #c82333, #a71d2a);
+}
+
+.btn-clear {
+    background-color: rgb(253, 0, 0);
+}
+
+.btn-clear:hover {
+    background-color: red;
+}
+
+.entity {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Para el posicionamiento absoluto de los botones */
+}
+
+.entity:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.entity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entity-header input {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    width: 70%;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.entity-header input:focus {
+    outline: none;
+    border-color: #0056b3;
+    background-color: #ffffff;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 580px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.relation-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.relation {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.relation select {
+    width: 48%;
+    margin-right: 2%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.relation select:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #ffffff;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.sql-output-container, .documentation-output-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sql-output-container:hover, .documentation-output-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+#sql-output, #documentation-output {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+    height: 150px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+#sql-output:focus, #documentation-output:focus {
+    background-color: #ffffff;
+}
+
+.primary-key-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.primary-key-container input {
+    margin-right: 5%; /* Espacio entre el checkbox y el texto */
+}
+
+/* Nuevo estilo para los botones de eliminar atributos */
+.btn-remove-attribute {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    padding: 8px 12px;
+    margin-left: 10px; /* Espacio entre el input y el botón */
+    font-size: 0.9em;
+}
+
+.btn-remove-attribute:hover {
+    background: linear-gradient(135deg, #c82333, #a71d2a);
+    transform: translateY(-2px);
+}
+
+/* Mejoras generales */
+.container {
+    gap: 20px; /* Espaciado entre elementos en la columna */
+}
